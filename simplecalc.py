@@ -15,7 +15,8 @@
 """
 X-Serv-App-Calculadora-REST
 
-Ejercicio de asignaturas de aplicaciones web. Servicios que interoperan. Calculadora simple versión REST.
+Ejercicio de asignaturas de aplicaciones web. Servicios que interoperan.
+Calculadora simple versión REST.
 Enunciado
 
 Realizar una calculadora de las cuatro operaciones aritméticas básicas
@@ -63,7 +64,11 @@ class operation (webappmulti.app):
 
     def process (self, verb, body):
         #aquí verb= tupla.
-        """ verb[0] --> get, post...
+
+        """
+        como estoy heredando los métodos de la clase padre, los argumentos que recibe esta funcion no encajan bien con los que
+        tiene la clase padre (webAppmulti), de forma que lo que debería ser 'verb' y 'body' no lo son exactamente.
+            verb[0] --> get, post...
             verb[1]--> cuerpo de la petición
             body --> lo que va después de /add/[...]
         """
